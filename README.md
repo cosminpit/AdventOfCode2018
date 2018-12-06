@@ -16,3 +16,10 @@ Instead of using the direct approach, I've tried to make the implementation less
 * [summed-area table](https://en.wikipedia.org/wiki/Summed-area_table)
 * [constant time 1D range incrementation](https://www.geeksforgeeks.org/constant-time-range-add-operation-array/) (it can be extend to 2D ranges by updating 4 values)
 
+### [Day 4: Repose Record](https://adventofcode.com/2018/day/4)
+The first thing to begin with is sorting all the lines, to ensure the actions are processed in the correct order. Afterwards, it becomes a parsing problem, and computing a map like *"guard[id][m] = how many days the guard having the identifier id sleeps during the m-th minute"* will facilitate solving the two tasks.
+
+### [Day 5: Alchemical Reduction](https://adventofcode.com/2018/day/5)
+A very cute problem, that boils down to simulating efficiently the chemical reactions. By using a stack, the reactions can be executed in order, left to right, as they occur, in linear time. 
+
+### [Day 6: Chronal Coordinates](https://adventofcode.com/2018/day/6)
