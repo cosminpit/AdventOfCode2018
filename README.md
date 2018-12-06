@@ -11,7 +11,7 @@ The first subtask can be solved by computing for each box the letter frequencies
 The last subtask is straightforward, by counting the number of mismatches for each pair of boxes.
 
 ### [Day 3: No Matter How You Slice It](https://adventofcode.com/2018/day/3)
-This puzzle can also be approached by using a matrix, and incrementing by 1 the corresponding cells of each of the provided rectangles. The two answers are: the number of cells having the value greater than 1, and the id of the rectangle for which the sum of the cells it covers is equal to its area. <br/>
+This puzzle can be approached by using a matrix, and incrementing by 1 the corresponding cells of each of the provided rectangles. The two answers are: the number of cells having the value greater than 1, and the id of the rectangle for which the sum of the cells it covers is equal to its area. <br/>
 Instead of using the direct approach, I've tried to make the implementation less boring, by optimizing the operations described above, *2D range incrementation* and *2D range sum*. The core idea is to use partial sums. More information about the techniques I've used can be found here:
 * [summed-area table](https://en.wikipedia.org/wiki/Summed-area_table)
 * [constant time 1D range incrementation](https://www.geeksforgeeks.org/constant-time-range-add-operation-array/) (it can be extend to 2D ranges by updating 4 values)
