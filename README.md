@@ -1,6 +1,6 @@
 # :christmas_tree: Advent Of Code 2018 - Christmas puzzles
 
-Christmas is comming and programming is always fun. From Dec 1st to Dec 25th, a puzzle consisting of two parts is released every day ([https://adventofcode.com](https://adventofcode.com)) and I'll be trying to solve them consistently, 25 days in a row, every morning, and hopefully fast enough to collect some points on the leaderboard. Let the Advent(ure) begin!
+Christmas is comming and programming is always a fun way to celebrate it. From Dec 1st to Dec 25th, a puzzle consisting of two parts is released every day ([https://adventofcode.com](https://adventofcode.com)) and I'll be trying to solve them consistently, 25 days in a row, every morning, and hopefully fast enough to collect some points on the leaderboard. Let the Advent(ure) begin!
 
 ### [Day 1: Chronal Calibration](https://adventofcode.com/2018/day/1)
 The answer for the first part is the sum of all the provided numbers. <br/>
@@ -23,3 +23,12 @@ The first thing to begin with is sorting all the lines, to ensure the actions ar
 A very cute problem, that boils down to simulating efficiently the chemical reactions. By using a stack, the reactions can be executed in order, left to right, as they occur, in linear time. 
 
 ### [Day 6: Chronal Coordinates](https://adventofcode.com/2018/day/6)
+I've decided tot keep the approach simple and thus I've computed the bounding box of the input points to reduce the processiong time. <br/>
+For the first task, every point of the bounding box is examined to determine to which region it belongs to, and to increase the size of that region, unless  it proves to be a '.' point. The only difficulty is identifying the infinite regions. It can be observed that a region is infinite if and only if it has at least one element situated at the beginning or the end of the line or column to which the initial point belongs to. <br/>
+For the second task, the searching region is derived from the original bounding box, by enlarging it as much as possible, in such a way the new corners will be still in a reach distance of 10000.
+
+### [Day 7: The Sum of Its Parts](https://adventofcode.com/2018/day/7)
+The key of the problem is the topological sorting. I've decided to use [Khan's algorithm](https://en.wikipedia.org/wiki/Topological_sorting) with slight changes to ensure the lexicographically minimal solution is computed. The second part is a generalization of the first one, where multiple workers can execute the tasks in parallel, and thus the code can be kept quite compact, by solving only the general problem.
+
+### [Day 8: Memory Maneuver](https://adventofcode.com/2018/day/8)
+Another cute problem. Since the tree layout is defined recursively, the recursive approach is self suggested. For more details, the source can be consulted.
